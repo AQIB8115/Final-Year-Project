@@ -9,7 +9,7 @@ const PCsDetails = () => {
 
     useEffect(() => {
         console.log('Fetching PCs from API...');
-        fetch('http://localhost:5000/api/getUserViewPcs')
+        fetch('https://final-year-project-api-ten.vercel.app/api/getUserViewPcs')
         .then(response => response.json())
         .then(data => {
             console.log(data);
