@@ -24,7 +24,7 @@ const AddUser = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/user/add', newUser);
+            const response = await axios.post('https://final-year-project-api-ten.vercel.app/user/add', newUser);
             setMessage(response.data.message);
             setNewUser({
                 username: '',
