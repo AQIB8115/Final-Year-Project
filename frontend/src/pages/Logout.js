@@ -9,7 +9,7 @@ const Logout = () => {
   const handleLogout = async () => {
     try {
       // Call the backend API to logout
-      const response = await fetch('http://localhost:5000/api/auth/logout', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/auth/logout', {
         method: 'POST',
         credentials: 'include', // Include session cookies with the request
       });
