@@ -9,7 +9,7 @@ const ReserveBook = () => {
   
   useEffect(() => {
     // Fetch book details using bookId
-    fetch(`http://localhost:5000/api/books/${bookId}`)
+    fetch(`https://final-year-project-api-ten.vercel.app/api/books/${bookId}`)
       .then((response) => response.json())
       .then((data) => setBook(data))
       .catch((err) => console.error(err));
@@ -18,7 +18,7 @@ const ReserveBook = () => {
   const handleReserve = () => {
     const userId = localStorage.getItem('userId'); // Assuming userId is stored in localStorage
     
-    fetch(`http://localhost:5000/api/reserve-book/${bookId}`, {
+    fetch(`https://final-year-project-api-ten.vercel.app/api/reserve-book/${bookId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId }),
