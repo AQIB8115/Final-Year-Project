@@ -50,7 +50,7 @@ const CreateBook = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/books', {
+            const response = await fetch('https://final-year-project-api-ten.vercel.app/api/books', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
