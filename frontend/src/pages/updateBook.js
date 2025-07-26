@@ -12,7 +12,7 @@ const UpdateBook = () => {
     useEffect(() => {
         const fetchBook = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/books/${id}`);
+                const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/books/${id}`);
                 if (!response.ok) throw new Error('Failed to fetch book details');
                 const data = await response.json();
                 setBook(data);
@@ -38,7 +38,7 @@ const UpdateBook = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:5000/api/books/${id}`, {
+            const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/books/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
