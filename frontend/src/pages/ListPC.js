@@ -10,7 +10,7 @@ const ListPC = () => {
     useEffect(() => {
         const fetchPCs = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/pcs');
+                const response = await axios.get('https://final-year-project-api-ten.vercel.app/api/pcs');
                 console.log('Fetched PCs:', response.data);
                 setPcs(response.data);
             } catch (error) {
