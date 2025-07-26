@@ -26,7 +26,7 @@ const SearchBooks = () => {
 
         
         // console.log('User ID:', userId); 
-        const response = await fetch(`http://localhost:5000/api/users/${userId}`, {
+        const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/users/${userId}`, {
           method: 'GET',
           credentials: 'include',
         });
@@ -42,7 +42,7 @@ const SearchBooks = () => {
 
     const fetchBook = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/books?title=${searchQuery}`);
+        const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/books?title=${searchQuery}`);
         const data = await response.json();
 
         console.log('Books data:', data); 
@@ -83,7 +83,7 @@ const SearchBooks = () => {
       });
     } else if (book) {
       try {
-        const response = await fetch(`http://localhost:5000/api/requests/reserve`, {
+        const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/requests/reserve`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ const SearchBooks = () => {
       });
     } else if (book) {
       try {
-        const response = await fetch(`http://localhost:5000/api/requests/borrow`, {
+        const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/requests/borrow`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
