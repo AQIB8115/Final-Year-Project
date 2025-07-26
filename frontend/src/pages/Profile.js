@@ -12,7 +12,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         // Fetch the profile data from the backend
-        const response = await fetch('http://localhost:5000/api/profile', {
+        const response = await fetch('https://final-year-project-api-ten.vercel.app/api/profile', {
           method: 'GET',
           credentials: 'include',  // Include cookies (session) with the request
         });
@@ -34,7 +34,7 @@ const Profile = () => {
   // Logout function
   const handleLogout = () => {
     // Implement logout functionality (e.g., clear session, redirect to login)
-    fetch('http://localhost:5000/api/logout', {
+    fetch('https://final-year-project-api-ten.vercel.app/api/logout', {
       method: 'POST',
       credentials: 'include',
     }).then(() => {
