@@ -10,7 +10,7 @@ const PcRequests = () => {
   const fetchRequests = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/requests', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/requests', {
         credentials: 'include',
       });
       if (!response.ok) {
@@ -30,7 +30,7 @@ const PcRequests = () => {
   // Update request status
   const updateStatus = async (requestId, status) => {
     try {
-      const response = await fetch('http://localhost:5000/api/status', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/status', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
