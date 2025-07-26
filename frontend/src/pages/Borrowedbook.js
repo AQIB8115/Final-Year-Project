@@ -8,7 +8,7 @@ const BorrowedBooks = () => {
   useEffect(() => {
     const fetchBorrowedBooks = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/all');
+        const response = await fetch('https://final-year-project-api-ten.vercel.app/api/all');
         if (!response.ok) {
           throw new Error(`Failed to fetch borrowed books: ${response.statusText}`);
         }
@@ -25,7 +25,7 @@ const BorrowedBooks = () => {
 
   const handleReturn = async (borrowId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/return/${borrowId}`, {
+      const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/return/${borrowId}`, {
         method: 'PUT',
       });
 
