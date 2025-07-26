@@ -39,7 +39,7 @@ const Login = () => {
         dataToSend = { employeeId: id.trim(), password };
       }
 
-      const response = await fetch('http://localhost:5000/api/login', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -98,7 +98,7 @@ const Login = () => {
         endTime,
       };
 
-      const response = await fetch('http://localhost:5000/api/create', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -119,7 +119,7 @@ const Login = () => {
 
   const handleBookRequest = async (bookId, type) => {
     try {
-      const requestResponse = await fetch('http://localhost:5000/api/requests/', {
+      const requestResponse = await fetch('https://final-year-project-api-ten.vercel.app/api/requests/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
