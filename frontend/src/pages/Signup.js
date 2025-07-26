@@ -26,7 +26,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/signup', formData, {
+            const response = await axios.post('https://final-year-project-api-ten.vercel.app/api/signup', formData, {
                 withCredentials: true, // Allow cookies to be sent
             });
             alert(response.data.message); // Display success message
