@@ -41,7 +41,7 @@ const StudentDashboard = () => {
 
     const fetchProfile = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/profile', {
+            const response = await fetch('https://final-year-project-api-ten.vercel.app/api/profile', {
                 method: 'GET',
                 credentials: 'include',
             });
