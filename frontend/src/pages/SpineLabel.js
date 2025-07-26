@@ -8,7 +8,7 @@ const SpineLabel = () => {
 
     useEffect(() => {
         // Fetch all books from backend
-        fetch('http://localhost:5000/api/books')
+        fetch('https://final-year-project-api-ten.vercel.app/api/books')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch books');
