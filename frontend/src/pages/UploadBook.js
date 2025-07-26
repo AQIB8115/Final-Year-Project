@@ -40,7 +40,7 @@ const UploadBook = () => {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/upload-pdf', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/upload-pdf', {
         method: 'POST',
         body: formData,
       });
