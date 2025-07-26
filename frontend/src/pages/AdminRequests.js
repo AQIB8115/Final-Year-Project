@@ -6,7 +6,7 @@ const AdminRequests = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/requests/pending', {
+        const response = await fetch('https://final-year-project-api-ten.vercel.app/api/requests/pending', {
           credentials: 'include',
         });
         if (response.ok) {
@@ -23,7 +23,7 @@ const AdminRequests = () => {
 
   const handleAction = async (requestId, action) => {
     try {
-      const response = await fetch('http://localhost:5000/api/requests/review', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/requests/review', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ requestId, action }),
