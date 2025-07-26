@@ -35,7 +35,7 @@ const ViewPDF = () => {
     setSearchResults([]);
 
     try {
-      const response = await fetch(`http://localhost:5000/api/view-pdf?title=${searchQuery}&authorName=${searchQuery}`);
+      const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/view-pdf?title=${searchQuery}&authorName=${searchQuery}`);
       const data = await response.json();
 
       if (!response.ok) {
