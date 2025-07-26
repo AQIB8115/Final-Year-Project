@@ -13,7 +13,7 @@ const BorrowConfirmation = () => {
         // Fetch book details
         const fetchBookDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/books/${bookId}`);
+                const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/books/${bookId}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch book details');
                 }
@@ -27,7 +27,7 @@ const BorrowConfirmation = () => {
         // Fetch user details
         const fetchUserDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/users/${userId}`);
+                const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/users/${userId}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch user details');
                 }
@@ -46,7 +46,7 @@ const BorrowConfirmation = () => {
 
     const handleConfirmBorrow = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/borrow', {
+            const response = await fetch('https://final-year-project-api-ten.vercel.app/api/borrow', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ bookId, userId }),
