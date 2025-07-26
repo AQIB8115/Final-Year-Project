@@ -22,7 +22,7 @@ const AllBooks = () => {
     const fetchBooks = async () => {
         if (searchQuery) {
             try {
-                const response = await fetch(`http://localhost:5000/api/books?search=${searchQuery}`, {
+                const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/books?search=${searchQuery}`, {
                 credentials: 'include',
             });
                 const data = await response.json();
@@ -61,7 +61,7 @@ const AllBooks = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/requests/', {
+            const response = await fetch('https://final-year-project-api-ten.vercel.app/api/requests/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -78,7 +78,6 @@ const AllBooks = () => {
 
             if (response.ok) {
                 alert('Your borrow request has been sent to the librarian for approval.');
-                // alert(`Book borrowed successfully! Due date: ${data.borrowDetails.dueDate}`);
             } else {
                 alert(`Error: ${data.message}`);
             }
