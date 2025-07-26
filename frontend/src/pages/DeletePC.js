@@ -11,7 +11,7 @@ const DeletePc = () => {
     useEffect(() => {
         const fetchPc = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/pcs/${id}`);
+                const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/pcs/${id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch PC');
                 }
@@ -27,7 +27,7 @@ const DeletePc = () => {
 
     const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/pcs/${id}`, {
+            const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/pcs/${id}`, {
                 method: 'DELETE',  
             });
 
