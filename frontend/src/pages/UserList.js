@@ -20,7 +20,7 @@ function UserList() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/users');
+                const response = await fetch('https://final-year-project-api-ten.vercel.app/api/users');
                 if (!response.ok) {
                     throw new Error('Failed to fetch users');
                 }
@@ -38,7 +38,7 @@ function UserList() {
         const confirmDelete = window.confirm("Are you sure you want to delete this user?");
         if (confirmDelete) {
             try {
-                const response = await fetch(`http://localhost:5000/api/users/${id}`, {
+                const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/users/${id}`, {
                     method: 'DELETE',
                 });
                 if (response.ok) {
@@ -57,7 +57,7 @@ function UserList() {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:5000/api/newuser', {
+            const response = await fetch('https://final-year-project-api-ten.vercel.app/api/newuser', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newUser),
