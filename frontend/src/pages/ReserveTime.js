@@ -14,7 +14,7 @@ const ReserveTime = () => {
   useEffect(() => {
     const fetchReservationStatus = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/reservation-status/${id}`);
+        const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/reservation-status/${id}`);
         const data = await response.json();
         if (data.status === 'reserved') {
           setIsReserved(true);
@@ -61,7 +61,7 @@ const ReserveTime = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/create', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(reservationDetails),
