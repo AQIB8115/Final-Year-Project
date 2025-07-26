@@ -8,7 +8,7 @@ const BookDetails = () => {
 
     useEffect(() => {
         // Fetch book details from backend
-        fetch(`http://localhost:5000/api/${AccNo}`)
+        fetch(`https://final-year-project-api-ten.vercel.app/api/${AccNo}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch book details');
