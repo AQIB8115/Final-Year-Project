@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5000'); // WebSocket connection
+const socket = io('https://final-year-project-api-ten.vercel.app/'); // WebSocket connection
 
 const SearchBooks = () => {
   const [book, setBook] = useState(null);
