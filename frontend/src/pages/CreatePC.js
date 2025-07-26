@@ -18,7 +18,7 @@ const CreatePC = () => {
         return;
     }
         try {
-            const response = await axios.post('http://localhost:5000/api/pcs', form, {
+            const response = await axios.post('https://final-year-project-api-ten.vercel.app/api/pcs', form, {
             headers: {
                 'Content-Type': 'application/json',
             },
