@@ -6,7 +6,7 @@ const Notifications = () => {
     useEffect(() => {
         const fetchNotifications = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/notifications', {
+                const response = await fetch('https://final-year-project-api-ten.vercel.app/api/notifications', {
                     credentials: 'include', // Include cookies for user session
                 });
                 const data = await response.json();
