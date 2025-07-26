@@ -6,7 +6,7 @@ const Notifications = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/notifications', {
+        const response = await fetch('https://final-year-project-api-ten.vercel.app/api/notifications', {
           credentials: 'include',
         });
         if (response.ok) {
@@ -23,7 +23,7 @@ const Notifications = () => {
 
   const handleRemoveNotification = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/notifications/${id}`, {
+      const response = await fetch(`https://final-year-project-api-ten.vercel.app/api/notifications/${id}`, {
         method: 'DELETE',
         credentials: 'include',
       });
