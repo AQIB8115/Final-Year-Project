@@ -32,7 +32,7 @@ const server = http.createServer(app); // Create the HTTP server
 // Initialize Socket.IO on the server
 const io = socketIO(server, {
     cors: {
-        origin: "http://localhost:3000", // Adjust to your front-end URL
+        origin: "https://final-year-project-6jlw.vercel.app/", // Adjust to your front-end URL
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         credentials: true, // Allow credentials
     },
@@ -45,7 +45,7 @@ const PORT = process.env.PORT || 5000;
 
 // CORS Configuration
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow requests from frontend
+    origin: 'https://final-year-project-6jlw.vercel.app/', // Allow requests from frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
     credentials: true, // Allow cookies and other credentials
@@ -53,7 +53,7 @@ app.use(cors({
 
 // Explicitly handle preflight OPTIONS requests
 app.options('*', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'https://final-year-project-6jlw.vercel.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
     res.setHeader('Access-Control-Allow-Credentials', 'true');
