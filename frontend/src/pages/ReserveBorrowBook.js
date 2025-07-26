@@ -13,7 +13,7 @@ const ReserveBorrowBook = ({ type }) => {
         setLoading(true);
         console.log('Sending request with bookId:', bookId, 'and type:', type);
         try {
-            const response = await fetch('http://localhost:5000/api/requests', {
+            const response = await fetch('https://final-year-project-api-ten.vercel.app/api/requests', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,5 +51,4 @@ const ReserveBorrowBook = ({ type }) => {
 };
 
 export default ReserveBorrowBook;
-//  = () => <ReserveBorrowBook type="reserve" />;
-// export const BorrowBook = () => <ReserveBorrowBook type="borrow" />;
+
