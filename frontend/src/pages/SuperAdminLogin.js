@@ -19,7 +19,7 @@ const SuperAdminLogin = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/users/login-superadmin', {
+      const response = await fetch('https://final-year-project-api-ten.vercel.app/api/users/login-superadmin', {
         method: 'POST',
         // withCredentials: true,
         headers: {
