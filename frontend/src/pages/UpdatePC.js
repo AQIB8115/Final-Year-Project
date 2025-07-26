@@ -15,7 +15,7 @@ const UpdatePC = () => {
     useEffect(() => {
         const fetchPC = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/pcs/${id}`);
+                const response = await axios.get(`https://final-year-project-api-ten.vercel.app/api/pcs/${id}`);
                 setPc(response.data);
             } catch (error) {
                 console.error('Error fetching PC:', error);
@@ -35,7 +35,7 @@ const UpdatePC = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/pcs/${id}`, pc);
+            await axios.put(`https://final-year-project-api-ten.vercel.app/api/pcs/${id}`, pc);
             navigate('/admin/list-pc'); 
         } catch (error) {
             console.error('Error updating PC:', error);
