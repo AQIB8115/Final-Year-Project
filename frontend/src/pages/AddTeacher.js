@@ -22,7 +22,7 @@ const AddTeacher = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/teacher/add', teacher);
+            const response = await axios.post('https://final-year-project-api-ten.vercel.app/teacher/add', teacher);
             setMessage(response.data.message);
             navigate('/admin/teacher');
         } catch (error) {
